@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    /* font-family: Roboto; */
+    font-style: normal;
+    font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "gilroybold";
+}
+
+/* Linking Fonts */
+
+@font-face {
+    font-family: 'gilroybold';
+    src: url('../fonts/gilroy-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gilroylight';
+    src: url('../fonts/gilroy-light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'gilroysemibold';
+    src: url('../fonts/gilroy-semibold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.container {
+    margin: 0px 60px;
+}
+
+/*  */
+
+nav {
+    padding: 30px 0px;
+    position: absolute;
+    width: 100%;
+    background-color: transparent; 
+
+}
+
+.navigation-bar {
+    display: flex;
+    /* margin: 0px 60px; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h6 {
+    font-size: 24px;
+    /* padding: 15px 0px; */
+}
+
+.brand-name {
+    color: #fff;
+    cursor: pointer;
+}
+
+.brand-name a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-links li {
+    /* padding: 0px 0px; */
+    font-size: 14px;
+    display: inline-block;
+    list-style: none;
+    padding: 0px 25px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links a:hover {
+    color: #477EC8;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+/* nav button {
+
+} */
+
+.btn-register {
+    padding: 18px 32px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #477EC8;
+    border: 1px solid #fff;
+    font-size: 16px;
+    transition: all 0.3s ease 0s;
+}
+
+.btn-login {
+    margin-left: 24px;
+    padding: 18px 32px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    border: 1px solid #ECECEC;
+}
+
+.btn-register:hover,
+.btn-login:hover {
+    background-color: rgb(71, 127, 200);
+    color: #fff;
+    transition: all 0.3s ease 0s;
+    border: 1px solid rgb(71, 127, 200);
+}
+
+#hero-section {
+    background-image: url(../images/hero.svg);
+    background-size: cover;
+    height: 80vh;
+}
+
+.hero-section-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-content-div {
+    padding: 200px 0px;
+    color: #fff;
+}
+
+.hero-heading {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 46px;
+    line-height: 60px;
+    letter-spacing: -0.02em;
+}
+
+.hero-head-highlight {
+    color: #1D6AFF;
+    font-family: "gilroybold";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 46px;
+}
+
+.hero-content {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.hero-btn {
+    color: #fff;
+    background: #1D6AFF;
+    border-radius: 5px;
+    border: none;
+    padding: 18px 54px;
+    transition: all 0.3s ease 0s;
+}
+
+.hero-btn:hover {
+    color: #1D6AFF;
+    background: #fff;
+    transition: all 0.3s ease 0s;
+}
+
+@media only screen and (min-width : 768px) {
+    .ham-mob{
+        display: none;
+    }
+    .hamburger-icon {
+        display: none;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+
+    .container {
+        margin: 0px 30px;
+    }
+
+    .nav-links{
+        display: none;
+    }
+    .hamburger-icon {
+        display: inline;
+    }
+    .ham-mob {
+        display: none;
+        position: fixed;
+        background-color: rgba(29, 104, 255, 0.95);
+        height: 100vh;
+        width: 100%;
+        transition: all 1s ease-in 0s;
+        text-align: center;
+    }
+    ul li a{
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+        color: #fff;
+    }
+
+    ul {
+        padding-top: 50%;
+    }
+
+    ul li {
+        padding: 20px 0px;
+    }
+}
+
+@media only screen and (max-width : 361px) {
+    #hero-section{
+        height: 100vh;
+    }
+
+    .hero-heading {
+        font-size: 30px;
+    }
+
+    .hero-head-highlight{
+        font-size: 40px;
+    }
+
+}

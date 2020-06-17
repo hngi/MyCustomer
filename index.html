@@ -2,85 +2,62 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="Description" content="Enter your description here" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/index.css">
-  <title>My Customer</title>
-  <style>
-    body {
-      padding: 2% 10%;
-      background-color: #ece8e8;
-    }
-
-    #header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 4rem;
-      text-align: center;
-      color: rgb(49, 48, 48);
-    }
-
-    .img-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .illustration {
-      width: 50%;
-    }
-
-    @media (max-width: 586px) {
-
-      body {
-        padding-top: 0;
-      }
-
-      section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 80vh;
-      }
-
-      .illustration {
-        width: 100%;
-      }
-
-      #header h1 {
-        font-size: 25px;
-      }
-
-      #header h6 {
-        font-size: 18px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>My Customer - Home</title>
+    <script src="https://kit.fontawesome.com/25fffa082a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <header>
+        <nav>
+            <div class="navigation-bar container">
+                <div class="brand-name">
+                    <a href="./index.html">
+                        <h6>MyCustomer</h6>
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">What We Do</a></li>
+                    <li><a href="">Features</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <a href=""><button class="btn-register">Register</button></a>
+                    <a href=""><button class="btn-login">Login</button></a>
+                </ul>
+                <a onclick="iconMenu()" class="hamburger-icon" href="#"><i class="fas fa-bars" style="color: #fff;"></i></a>
+                <!-- <img  style="height: 25px; width:auto;cursor: pointer;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/800px-Hamburger_icon.svg.png" alt=""> -->
+                <!-- <div class="nav-button">
+                </div> -->
+            </div>
+        </nav>
+        <div class="ham-mob">
+            <ul class="m-nav-links">
+                <li><a href="">About Us</a></li>
+                <li><a href="">What We Do</a></li>
+                <li><a href="">Features</a></li>
+                <li><a href="">Contact Us</a></li><br>
+                <a href=""><button class="btn-register">Register</button></a>
+                <a href=""><button class="btn-login">Login</button></a><br><br>
+                <a onclick="closeMenu()" class="hamburger-icon" href="#"><i class="fas fa-times" style="color: #fff;"></i></a>
+            </ul>
+        </div>
+    </header>
 
-  <section>
-    <div id="header">
-      <h1 class="main-heading">Welcome To MyCustomer</h1>
-      <h6 class="subheading">Opps! our web app is under construction</h6>
-    </div>
 
-    <div class="img-container">
-      <img class="illustration" src="applications/web/assets/images/mad-designer.png" alt="construction image">
-    </div>
-  </section>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <section id="hero-section">
+        <div class="hero-section-overlay">
+            <div class="hero-content-div container">
+                <h1 class="hero-heading">Welcome to <span class="hero-head-highlight">MyCustomer</span></h1>
+                <p class="hero-content">Track debts,send messages to your customers all from<br>MyCustomer.</p>
+                <button class="hero-btn">Click to Get Started</button>
+            </div>
+        </div>
+    </section>
+    <section style="height: 100vh"></section>
+    <section style="height: 100vh"></section>
+    <script src="./scripts/main.js"></script>
 </body>
 
 </html>
