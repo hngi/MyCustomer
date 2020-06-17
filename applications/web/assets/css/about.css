@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Variables */
+:root {
+  --dark-blue: #1d6aff;
+  --light-blue: #477ec8;
+  --white: #ffffff;
+  --gray-bg: #e5e5e5;
+  --gray-text: #595959;
+}
+
+.container {
+  max-width: 1400px;
+  padding: 0 1rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Utilities */
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  outline: none;
+  transition: opacity 0.2s ease-in;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  border-radius: 5px;
+}
+
+.btn-white {
+  background: var(--white);
+  color: var(--light-blue);
+}
+
+.btn-transparent {
+  background: transparent;
+  border: 1px solid var(--white);
+}
+
+.btn-primary {
+  background: var(--dark-blue);
+  color: var(--white);
+}
+
+.btn:hover {
+  opacity: 0.6;
+}
+
+.text-primary {
+  color: var(--dark-blue);
+}
+
+.text-gray {
+  color: var(--gray-text);
+}
+
+/* Header */
+header {
+  background: var(--dark-blue) url("../images/about_us_header_bg.png");
+  background-size: cover;
+  height: 60vh;
+}
+
+/* This is to darken the background image of the header */
+
+header .content {
+  background: rgba(0, 0, 0, 0.4);
+  min-height: 100%;
+}
+
+/* nav */
+nav {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h2 {
+  color: var(--white);
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 31px;
+  letter-spacing: -0.02em;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 2rem;
+}
+
+nav ul li.nav-list:hover a {
+  border-bottom: 2px solid var(--dark-blue);
+  padding-bottom: 0.5rem;
+}
+
+nav ul li a {
+  color: var(--white);
+  font-size: 16px;
+  line-height: 21px;
+}
+
+nav .nav_btn {
+  padding: 16px 40px;
+}
+
+/* Header Section */
+header section {
+  margin: 4rem 0;
+}
+
+header section h1 {
+  font-weight: bold;
+  font-size: 46px;
+  line-height: 60px;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+
+header section p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  margin: 8px 0;
+  color: #ececec;
+}
+
+header section .sect_btn {
+  margin: 16px 0;
+  padding: 16px 60px;
+}
+
+/* Main */
+main {
+  background: var(--gray-bg);
+  min-height: 75vh;
+  padding: 62px 0;
+  position: relative;
+}
+
+main .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 52px;
+}
+
+main .our-story h2 {
+  margin: 16px 0;
+  font-weight: bold;
+  font-size: 49px;
+  line-height: 47px;
+  letter-spacing: -0.02em;
+}
+
+main .our-story h3 {
+  margin: 16px 0;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 31px;
+  letter-spacing: -0.02em;
+}
+
+main .our-story p {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 37px;
+  color: #595959;
+  margin: 16px 0;
+}
+
+main .our-image {
+  background: url("../images/Vector.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 550px 420px;
+}
+
+main .our-image {
+  position: relative;
+}
+
+main .our-image img {
+  position: absolute;
+  width: 450px;
+  right: 0;
+  top: 20px;
+}
+
+/* Section */
+section#download {
+  position: relative;
+  background: var(--gray-bg);
+  height: 75vh;
+}
+
+section#download .bg {
+  position: absolute;
+  width: 100%;
+  height: 45vh;
+  bottom: 150px;
+  background: url("../images/yellow_bg.png");
+}
+
+section#download .bg .container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+section#download .bg .content h3 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+
+section#download .bg .content img {
+  background: #000;
+  margin: 1rem 0;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+section#download > img {
+  position: absolute;
+  right: 200px;
+  top: 0;
+  bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background: var(--white);
+  padding: 52px 0;
+}
+
+footer .top {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer h2 {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 42px;
+  letter-spacing: -0.02em;
+}
+
+footer .top ul {
+  display: flex;
+}
+
+footer .top li {
+  margin: 0 1rem;
+}
+
+footer .top input {
+  height: 50px;
+  width: 200px;
+  padding: 1rem;
+  margin: 10px 0;
+  font-size: 14px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+footer .top li a {
+  color: var(--light-blue);
+}
+
+footer .top li:hover a {
+  border-bottom: 2px solid var(--dark-blue);
+  padding-bottom: 8px;
+}
+
+footer .bottom {
+  margin-top: 62px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .bottom ul {
+  display: flex;
+}
+
+footer .bottom li {
+  margin-left: 40px;
+}
+
+footer .bottom li a {
+  color: #000;
+}
