@@ -12,10 +12,10 @@ To contribute to this project you need to fork this repo and clone it to you loc
 
 ## Conributing
 
-These guidelines can get you started on contributing to our repository. For more information please see the [contributing guidelines](https://github.com/hngi/mycustomer/tree/master/CONTRIBUTING.md).
+These guidelines can get you started on contributing to our repository. For more information please see the [contributing guidelines](https://github.com/hngi/MyCustomer/tree/master/CONTRIBUTING.md).
 
 1. On your local repo, before writing any code, create a new branch for the new feature you will be working on using `git checkout -b new-feature-branch`
-2. After you have made some changes on your new branch, stage your changes and commit with a proper and meaningful commit message, see the commit message guidelines, using `git add .` to stage your files and `git commit -m 'added feature 1'`
+2. After you have made some changes on your new branch, stage your changes and commit with a proper and meaningful commit message, see the [commit message guidelines](https://github.com/nhgi/MyCustomer/tree/master/CONTRIBUTING.md#commit-message-guidelines), using `git add .` to stage your files and `git commit -m 'added feature 1'`
 3. Push your changes to your remote repo using `git push origin new-feature-branch`
 4. On Github, visit the original repo and create a pull request against the `develop` branch. This should ideally be automatic and require no extra effort. Request a review of you PR to have it merged. Your PR may need a minimum of 2 reviewers to have it merged. If any changes are requested, all you need is to make changes on your local repo and make commits to push again.
 5. After your PR is merged, run `git pull upstream develop` to sync your local repo with the original repo.
