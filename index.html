@@ -1,30 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="Enter your description here"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-<link rel="stylesheet" href="assets/css/index.css">
-<title>My Customer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/index.css">
+  <title>My Customer</title>
+  <style>
+    body {
+      padding: 2% 10%;
+      background-color: #ece8e8;
+    }
+
+    #header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 4rem;
+      text-align: center;
+      color: rgb(49, 48, 48);
+    }
+
+    .img-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .illustration {
+      width: 50%;
+    }
+
+    @media (max-width: 586px) {
+
+      body {
+        padding-top: 0;
+      }
+
+      section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+      }
+
+      .illustration {
+        width: 100%;
+      }
+
+      #header h1 {
+        font-size: 25px;
+      }
+
+      #header h6 {
+        font-size: 18px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  
+
   <section>
     <div id="header">
       <h1 class="main-heading">Welcome To MyCustomer</h1>
       <h6 class="subheading">Opps! our web app is under construction</h6>
     </div>
-  
+
     <div class="img-container">
-      <img class="illustration" src="assets/images/mad-designer.png" alt="construction image">
+      <img class="illustration" src="applications/web/assets/images/mad-designer.png" alt="construction image">
     </div>
   </section>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
+
 </html>
