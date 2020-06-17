@@ -23,8 +23,24 @@ body {
   width: 50%;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 586px) {
+  
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+  }
+  
   .illustration {
     width: 100%;
+  }
+
+  #header h1 {
+    font-size: 25px;
+  }
+
+  #header h6 {
+    font-size: 18px;
   }
 }
