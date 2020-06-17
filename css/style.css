@@ -1,11 +1,12 @@
+/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+/* Basic*/
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    /* font-family: Roboto; */
     font-style: normal;
     font-weight: 500;
 }
@@ -51,6 +52,7 @@ h6 {
 
 /*  */
 
+/* Navigation Starts */
 nav {
     padding: 30px 0px;
     position: absolute;
@@ -134,6 +136,7 @@ nav h6 {
     border: 1px solid rgb(71, 127, 200);
 }
 
+/* Hero Section */
 #hero-section {
     background-image: url(../images/hero.svg);
     background-size: cover;
@@ -188,6 +191,10 @@ nav h6 {
     background: #fff;
     transition: all 0.3s ease 0s;
 }
+
+/* Hero Section Ends */
+
+/* Below Media Quries for responsiveness */
 
 @media only screen and (min-width : 768px) {
     .ham-mob{
