@@ -1,0 +1,159 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@font-face {
+    font-family: 'Gilroy-Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Gilroy-Bold'), url('../GilroyFont/Gilroy-Bold.woff') format('woff');
+    }
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #E5E5E5 !important;
+}
+
+.contact-form{
+    margin-top: 5%;
+}
+
+.c-head{
+    font-style: normal;
+    font-weight: bold;
+    font-family: 'Gilroy-Bold';
+    font-size: 40px;
+    text-align: center;
+    line-height: 52px;
+    color: #1D6AFF;
+    letter-spacing: -0.02em;
+    margin-bottom: 8%;
+}
+.txt-1{
+    font-family: 'Gilroy-Bold';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;
+    letter-spacing: -0.02em;
+    margin-bottom: 10%;
+    color: #595959;
+}
+.txt-sub{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 27px;
+    color: #595959;
+}
+.icon{
+    margin-right: 20px;
+}
+.txt-box{
+    margin: 5px;
+}
+form{
+    max-width: 670px;
+    margin-left: 10%;
+    margin-top: -3%;
+}
+form > input{
+  width: 100%;
+  padding: 15px 5px;
+  outline: none;
+  border: none;
+  margin-bottom: 8%;
+  overflow: none;
+  background: transparent;
+  border: hidden;
+  border-bottom: 2px solid #8C8C8C;
+  border-radius: 0;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+form > textarea{
+  width: 100%;
+  outline: none;
+  border: none;
+  overflow: none;
+  border-bottom: 2px solid #8C8C8C;
+  border-radius: 0 !important;
+  padding: 15px 5px;
+  margin: 8px 0;
+  background: transparent;
+  display: inline-block;
+  box-sizing: border-box;
+  resize: none;
+  box-shadow: none;
+}
+
+::placeholder{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 27px;
+}
+input[type="submit"]{
+    background-color: #1D6AFF;
+    border-radius: 10px;
+    border: none;
+    border-bottom: none;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 5%;
+    width: 400px;
+}
+
+@media screen and (max-width: 992px){
+    .c-head{
+        font-size: 30px;
+    }
+    .txt-box{
+        margin: 20px;
+    }
+    .txt-1{
+        font-size: 20px;
+    }
+    .txt-sub{
+        text-align: left;
+    }
+    form{
+        margin-left: 0px;
+        margin: 20px;
+    }
+
+}
+
+@media screen and (max-width: 480px){
+    .c-head{
+        font-size: 30px;
+    }
+    .txt-box{
+        margin: 20px;
+    }
+    .txt-1{
+        font-size: 20px;
+    }
+    .txt-sub{
+        text-align: left;
+    }
+    form{
+        margin-left: 0px;
+        margin: 20px;
+    }
+
+}
