@@ -11,10 +11,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
-app.post("/customer",(req,res)=>{
-
-    console.log(req.body);
-
+app.post("/customer",(req,res)=> {
     const costumer = new Customers({
         _id: new mongoose.Types.ObjectId(),
         name: req.body.name,
@@ -33,8 +30,63 @@ app.post("/customer",(req,res)=>{
     });
 });
 
+app.put("/customer", (req,res)=>{
+    Customers.findById(req.body._id, (err, customer) => {
+        if(err) {
+            res.status(404).send({
+                error: true, 
+                code: 404, 
+                message: 'Not found'
+            });
+        } else {
+            customer.name = req.body.name
+            customer.phone = req.body.phone
+            customer.save()
+            res.send(customer)
+        }
+    });
+});
+
 app.get("/customer/:customerId",(req,res)=>{
-    console.log(req.params.customerId);
+    Customers.findById(req.params.customerId, (err, customer) => {
+        if(err) {
+            res.status(404).send({
+                error: true, 
+                code: 404, 
+                message: 'Not found'
+            });
+        } else {
+            res.send(customer)
+        }
+    });
+});
+
+app.delete("/customer/:customerId",(req,res)=>{
+    Customers.findByIdAndDelete(req.params.customerId, (err, customer) => {
+        if(err || !customer) {
+            res.status(404).send({
+                error: true, 
+                code: 404, 
+                message: 'Not found'
+            });
+        } else {
+            res.send(customer)
+        }
+    });
+});
+
+app.get("/customers",(req,res)=>{
+    Customers.find({}, (err, customers) => {
+        if(err) {
+            res.status(404).send({
+                error: true, 
+                code: 404, 
+                message: 'Not found'
+            });
+        } else {
+            res.send(customers)
+        }
+    });
 });
 
 app.use(function(req, res, next) {
