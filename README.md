@@ -10,7 +10,7 @@ To contribute to this project you need to fork this repo and clone it to you loc
 2. Clone your forked repo to your local development environment by running `git clone https://github.com/your-username/MyCustomer` within your folder of choice
 3. Create a remote pointing to the original repo using `git remote add upstream`
 
-## Conributing
+## Contributing
 
 These guidelines can get you started on contributing to our repository. For more information please see the [contributing guidelines](https://github.com/hngi/MyCustomer/tree/master/CONTRIBUTING.md).
 
