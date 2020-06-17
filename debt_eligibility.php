@@ -54,19 +54,19 @@ if (checkEmpty($_GET)) {
         $customer_registration_date = $customer_data->reg_date; //gets the customer registraton date
         $customer_total_debt = $customer_data->total_debt; // gets the customer total debt
         $customer_total_payment = $customer_data->total_payments; // gets the customer total payments
-        if ($customer_total_debt < 1) { //checks if the customer as no oustanding debt
+        $date1 = date_create($customer_registration_date);
+        $text = date('Y-m-j');
+        $date = date_create($text);
+        $diff = date_diff($date1, $date);
+        if ($diff < 30) { //check the difference between the currente date and customer registration date
             $response_data = [
-                "message" => "customer can borrow",
-                "result" => true
+                "message" => "customer can not borrow",
+                "result" => false
             ];
-            echo  json_encode($response_data); //customer can borrow
+            echo  json_encode($response_data); //customer can not borrow
             die();
         } else {
-            $date1 = date_create($customer_registration_date);
-            $text = date('Y-m-j');
-            $date = date_create($text);
-            $diff = date_diff($date1, $date);
-            if ($diff < 30) { //check the difference between the currente date and customer registration date
+            if ($customer_total_debt < 1) { //checks if the customer as no oustanding debt
                 $response_data = [
                     "message" => "customer can borrow",
                     "result" => true
