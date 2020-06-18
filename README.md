@@ -1,7 +1,7 @@
 # Team Sentry
 
 
-###TEAM Sentry - INSTALLATION
+### TEAM Sentry - INSTALLATION
 
 Step 1: Click on Fork at the top right corner
 
