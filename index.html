@@ -2,85 +2,236 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="Description" content="Enter your description here" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/index.css">
-  <title>My Customer</title>
-  <style>
-    body {
-      padding: 2% 10%;
-      background-color: #ece8e8;
-    }
-
-    #header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 4rem;
-      text-align: center;
-      color: rgb(49, 48, 48);
-    }
-
-    .img-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .illustration {
-      width: 50%;
-    }
-
-    @media (max-width: 586px) {
-
-      body {
-        padding-top: 0;
-      }
-
-      section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 80vh;
-      }
-
-      .illustration {
-        width: 100%;
-      }
-
-      #header h1 {
-        font-size: 25px;
-      }
-
-      #header h6 {
-        font-size: 18px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>My Customer - Home</title>
+    <script src="https://kit.fontawesome.com/25fffa082a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <!-- Starting of Navigation Bar -->
+    <header>
+        <nav>
+            <div class="navigation-bar container">
+                <div class="brand-name">
+                    <a href="./index.html">
+                        <h6>MyCustomer</h6>
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">What We Do</a></li>
+                    <li><a href="">Features</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <a href=""><button class="btn-register">Register</button></a>
+                    <a href=""><button class="btn-login">Login</button></a>
+                </ul>
+                <a onclick="iconMenu()" class="hamburger-icon" href="#"><i class="fas fa-bars" style="color: #fff;"></i></a>
+            </div>
+        </nav>
+        <!-- Navbar for Mobile -->
+        <div class="ham-mob">
+            <ul class="m-nav-links">
+                <li><a href="">About Us</a></li>
+                <li><a href="">What We Do</a></li>
+                <li><a href="">Features</a></li>
+                <li><a href="">Contact Us</a></li><br>
+                <a href=""><button class="btn-register">Register</button></a>
+                <a href=""><button class="btn-login">Login</button></a><br><br>
+                <a onclick="closeMenu()" class="hamburger-icon" href="#"><i class="fas fa-times" style="color: #fff;"></i></a>
+            </ul>
+        </div>
+    </header>
 
-  <section>
-    <div id="header">
-      <h1 class="main-heading">Welcome To MyCustomer</h1>
-      <h6 class="subheading">Opps! our web app is under construction</h6>
-    </div>
+    <!-- Ending of Navigation Bar -->
 
-    <div class="img-container">
-      <img class="illustration" src="applications/web/assets/images/mad-designer.png" alt="construction image">
-    </div>
-  </section>
+    <!-- Main-Hero Section -->
+    <section id="hero-section">
+        <div class="hero-section-overlay">
+            <div class="hero-content-div container">
+                <h1 class="hero-heading">Welcome to <span class="hero-head-highlight">MyCustomer</span></h1>
+                <p class="hero-content">Track debts,send messages to your customers all from<br>MyCustomer.</p>
+                <button class="hero-btn">Click to Get Started</button>
+            </div>
+        </div>
+    </section>
+    <!-- End of Hero Section -->
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- Start of Our aim Section -->
+        <section id="aim"> 
+            <div class="aim_heading">
+                <h2 >What We Aim To Do For You</h2>
+            </div>
+            <div class="aim_box">
+                <div class="aim_box_item">
+                    <div class="aim_box_item_image">
+                    <img src="./images/aim_1.svg" alt="">
+                    </div>
+                    <div class="aim_box_item_content">
+                    <p>Automate Payment for debts from customers</p>
+                    </div>
+                </div>
+                <div class="aim_box_item">
+                        <div class="aim_box_item_image">
+                        <img src="./images/aim_2.svg" alt="">
+                        </div>
+                        <div class="aim_box_item_content">
+                        <p>Keep track of your customers</p>
+                        </div>
+                </div>
+                <div class="aim_box_item">
+                    <div class="aim_box_item_image">
+                        <img src="./images/aim_3.svg" alt="">
+                        </div>
+                        <div class="aim_box_item_content">
+                        <p>Automate sending of messages to customers and debtors</p>
+                        </div>
+                </div>
+            </div>
+    </section>
+    <!-- End of Our Aim Section -->
+
+    <!-- Start of About Section -->
+    <section id="about">
+        <div class="about">
+            <div class="about_box">
+                <div class="about_box_image left">
+                    <img src="./images/about_img_1.svg" alt="about-us">
+                </div>
+                <div class="about_box_content">
+                    <h2>About MyCustomer</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elementum auctor blandit. Quisque rhoncus libero in pretium faucibus. Cras sagittis pretium nunc quis gravida.</p>
+                </div>
+            </div>
+            <div class="about_box">
+                <div class="about_box_image">
+                    <img src="./images/about_img_2.svg" alt="about-us">
+                </div>
+                <div class="about_box_content left">
+                    <h2>MyCustomer, bringing you closer to your customers.</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of About Us section -->
+
+    <!-- Start of Features Section -->
+    <section id="feature">
+        <div class="feature_heading">
+            <h2>MyCustomer Features</h2>
+        </div>
+        <div class="feature_box">
+            <div class="feature_box_item">
+                <h3>Track Customers Debts</h3>
+                <p>Amazing record keeping feature to trace every customers debt</p>
+            </div>
+            <div class="feature_box_item">
+                <h3>Add Customers</h3>
+                <p>Add as much customers as you want</p>
+            </div>
+            <div class="feature_box_item">
+                <h3>Create Ledgers</h3>
+                <p>Keep records of sales and balance accounts automatically with a simple click</p>
+            </div>
+            <div class="feature_box_item">
+                
+                <h3>Accept Payments</h3>
+                <p>Make simple, fast and seamless online transactions even on the go with our App </p>
+            </div>
+        </div>
+    </section>
+    <!-- End of Features section -->
+
+    <!-- Start of Testemonial Section: Akash Take the wheel :-) -->
+
+    <!-- End of Testemonial Section  -->
+
+    <!-- Start of Message Us Section -->
+    <section id="message">
+        <div class="message_heading">
+            <h2>Send Us A Message</h2>
+        </div>
+        <div class="message_box">
+            <div class="message_form">
+                <form action="#" method="post">
+                    
+                <label for="Email">Email Address</label>
+                <input type="email" placeholder="Email Address" name="email-address" id="">
+
+                <label for="Message">Message</label>
+                <textarea name="message" id="" cols="30" placeholder="Message" rows="10"></textarea>
+
+                <button class="message_form_button"><a href="#">Send Message</a></button>
+                </form>
+            </div>
+            <div class="message_contact">
+                <div class="message_contact_heading">
+                    <h3>Contact Details</h3>
+                </div>
+                <div class="message_contact_phone">
+                    <p>
+                         <span class="message_contact_icon"><img src="./images/phone_icon.svg" alt=""></span>   +901 244 6653 662
+                    </p>
+                </div>
+                <div class="message_contact_email">
+                    <p>
+                        <span class="message_contact_icon"><img src="./images/message_icon.svg" alt=""></span>
+                        mycustomer@gmail.com
+                   </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of messages section -->
+
+    <!-- Start of Get Our App Section -->
+    <section id="download">
+        <div class="download_message">
+            <h2>Download the MyCustomer App on your phone to use on the Go</h2>
+            <img src="./images/play_store.svg" alt="">
+        </div>
+        <div class="download_image anim">
+            <img src="./images/phone_image.svg" alt="">
+        </div>
+    </section>
+
+    <section id="footer">
+        <div class="footer_top">
+            <div class="footer_top_heading">
+                <h3>MyCustomer</h3>
+            </div>
+            <div class="footer_top_list">
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">What We Do</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer_top_form">
+                <label for="Newsletter Subscription"> Subscribe to our newsletter</label>
+                <input type="email" name="subscription" placeholder="Enter Your Email Address" id="">
+            </div>
+        </div>
+
+        <div class="footer_bottom">
+            <div class="footer_bottom_copyright">
+                <p>&copy;2020 MyComputer. All Rights Reserved.</p>
+                <a href="#hero">Terms</a>
+                <a href="#hero">Privacy</a>
+            </div>
+            <div class="footer_bottom_sociallinks">
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-google-plus-g"></i>
+            </div>
+        </div>
+      
+    </section>
+    <!-- linking js File -->
+    <script src="./scripts/main.js"></script>
 </body>
 
 </html>
