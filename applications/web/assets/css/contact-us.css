@@ -5,7 +5,7 @@
     font-family: 'Gilroy-Bold';
     font-style: normal;
     font-weight: normal;
-    src: local('Gilroy-Bold'), url('../fonts/gilroy-bold.woff') format('woff');
+    src: local('Gilroy-Bold'), url('./fonts/gilroy-Bold.woff') format('woff');
     }
 
 *{
@@ -115,7 +115,7 @@ input[type="submit"]{
     font-size: 16px;
     line-height: 24px;
     margin-top: 5%;
-    width: 400px;
+    max-width: 400px;
 }
 
 @media screen and (max-width: 992px){
