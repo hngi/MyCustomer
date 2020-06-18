@@ -1,69 +1,33 @@
-Setup
-# MyWork Email Service
-
-MyWork Email Service helps dispatch emails to clients 
-
----
-## Requirements
-
-For development, you will only need Node.js and RabbitMQ
- 
-## Install
-
-    $ git clone https://github.com/YOUR_USERNAME/PROJECT_TITLE
-    $ cd PROJECT_TITLE
-    $ npm install
-    
-1. #### Start  RabbitMQ
-[official RabbitMQ documentation](https://www.rabbitmq.com/documentation.html)
-
-    $ brew update
-    $ brew install rabbitmq
-    $ brew services start rabbitmq     
-    $ brew services stop  rabbitmq   // stop service 
-    $ brew services restart rabbitmq  // restart service
-
-3. ####Clone this repository
+# Team Sentry
 
 
-    $ git clone https://<YOUR_USERNAME>@bitbucket.com/Michael_Owokade/mywork-email-service.git
-    $ cd mywork-email-service
-    $ npm install
-    $ npm run start
-    
-3. #### Run RabbitMQ consumer
+###TEAM Sentry - INSTALLATION
+
+Step 1: Click on Fork at the top right corner
+
+Step 2: Clone your forked repository
+
+Step 3: cd into the cloned folded | <code>cd https://github.com/ekpono/santry-customerapp</code>
+
+Step 4: git remote add upstream https://github.com/ekpono/santry-customerapp.git
+
+Step 5: git pull upstream master
+
+Step 6: Check out to the task branch | <code>git checkout -b <NAME_OF_THE_TASK></code>
 
 
-    $ node services/rabbitMQ/consumer.js consumerMessage
-    
-#### Using Example Implementation 🤧
+#### Creating a pull request
 
-Path to actual implementation
-``app/Repositories/leave/LeaveSchedulerRepository.php``
+Step 1: Run: git add .
 
- `line 83`
+Step 2: Run: git commit -m "<COMMIT MESSAGE>"
 
+Step 3: git push origin <BRANCH_NAME>
 
+Go to the repository https://github.com/ekpono/santry-customerapp
 
+As soon as you get there, you are going to see a green ‘compare and create a pull request’
 
-Ensure you have added this to your .env MyWork main app
-`EMAIL_SERVICE_BASE_URL=http://localhost:5000`
+Click on it, and type your message, click on create pull request.
 
-
-#### Usage
-
-```
-use App\Services\EmailService;
-
-public function __construct(EmailService $emailService)
-{
-     $this->emailService = $emailService;
- }
-
- $this->emailService->SendEmailToQueue($to, $subject, $body, $from);
-```
-
-Shell script coming soon!!!
-
-
-Have fun using this :)😅
+If you have any more questions, please check out this resource -> https://www.youtube.com/watch?v=HbSjyU2vf6Y
