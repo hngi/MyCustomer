@@ -11,7 +11,7 @@ Step 3: cd into the cloned folded | <code>mycustomer</code>
 
 Step 4: git remote add upstream https://github.com/hngi/MyCustomer.git
 
-Step 5: git pull upstream master
+Step 5: git pull upstream develop
 
 Step 6: Check out to the task branch | <code>git checkout -b <NAME_OF_THE_TASK></code>
 
