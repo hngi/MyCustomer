@@ -28,7 +28,7 @@ Go to the repository https://github.com/hngi/MyCustomer
 
 As soon as you get there, you are going to see a green ‘compare and create a pull request’
 
-Click on it, and type your message, click on create pull request.
+Click on it, and type your message, click on create pull request
 
 If you have any more questions, please check out this resource -> https://www.youtube.com/watch?v=HbSjyU2vf6Y
 
