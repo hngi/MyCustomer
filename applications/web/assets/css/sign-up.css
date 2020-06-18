@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+nav {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+}
+.logo {
+  font-weight: 900;
+  color: #191919;
+}
+
+.fa {
+  position: absolute;
+}
+
+main {
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: inherit;
+}
+main .container h1 {
+  color: #1d6aff;
+  border-bottom: 3px solid #1d6aff;
+  padding-bottom: 0.5rem;
+  margin-bottom: 4rem;
+  font-weight: 900;
+}
+.form-control {
+  position: relative;
+}
+.fa-envelope-o,
+.fa-user-o,
+.fa-mobile,
+.fa-lock {
+  left: 0;
+  top: 10%;
+}
+.fa-eye,
+.fa-eye-slash {
+  cursor: pointer;
+  right: 0.5rem;
+  top: 10%;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid #8c8c8c;
+  line-height: 2rem;
+  margin-bottom: 3rem;
+  width: 100%;
+  padding-left: 1.5rem;
+  font-size: 1rem;
+}
+input:focus {
+  border-color: #1d6aff;
+  outline: none;
+}
+
+input[type="checkbox"] {
+  margin-bottom: 0;
+  margin-right: 0.5rem;
+  width: fit-content;
+  padding: 0;
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.terms a {
+  color: #1d6aff;
+  text-decoration: none;
+}
+.btn {
+  width: 100%;
+  border-style: none;
+  border-radius: 12px;
+  background-color: #1d6aff;
+  color: #ffffff;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 52px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+footer {
+  text-align: center;
+  height: 10vh;
+}
+
+footer ul {
+  width: 90%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-content: flex-end;
+  list-style: none;
+  height: 100%;
+}
+footer ul li {
+  margin: 0.5rem;
+  align-self: flex-end;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+footer ul li a {
+  color: #191919;
+  text-decoration: none;
+}
+footer ul li a:hover {
+  color: #1d6aff;
+}
+@media (min-width: 665px) {
+  .container {
+    width: 600px;
+  }
+  form {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 495px) {
+  .container {
+    margin-bottom: 3rem;
+  }
+  footer {
+    height: auto;
+  }
+  footer ul {
+    width: 100%;
+    margin: 0;
+    flex-direction: column;
+  }
+  footer ul li {
+    align-self: center;
+  }
+
+  nav {
+    padding: 0 1rem;
+  }
+}
