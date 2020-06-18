@@ -20,5 +20,3 @@ router.post("/verify-phone", (req, res) => {
     });
 
 })
-
-module.exports = router;
