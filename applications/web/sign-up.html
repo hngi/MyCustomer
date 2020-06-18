@@ -1,0 +1,89 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./log.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <main>
+
+    <div class="center">
+        <h1>MyCustomer</h1>
+
+        <form method="POST">
+
+            <div class="txt_field">
+                <input  type="text" required>
+                <i class="mail fa fa-envelope-o"></i>
+
+                <label>Email Address</label>
+            </div>
+
+            <div class="txt_field">
+                <input type="password" required id="myInput">
+                <i class=" lock fa fa-lock"></i>
+                <label>Password</label>
+
+                <span class="eye" onclick="myFunction()">
+                    <i id="hide1" class="fa fa-eye"></i>
+                    <i id="hide2" class="fa fa-eye-slash"></i>
+                </span>
+                
+            </div>
+
+            <div class="content">
+                <div class="remember_me">
+                    <input type="checkbox">
+                    Remember me
+                  </div>
+
+                <div class="pass">Forgot Password?</div>
+                
+            </div>
+
+          
+
+            <input type="submit" value="Login">
+
+
+        </form>
+    </div>
+    </main>
+
+<footer id="footer">
+    <div class="footer_content">
+        <div><a class="content" href="#">Contact</a></div>
+        <div><a class="content" href="#">Privacy Policy</a></div>
+        <div><a class="content" href="#">Terms of use</a></div>
+        <div><a class="content" href="#">Cookie Policy</a></div>
+    </div>
+</footer>
+
+
+<script>
+    function myFunction() {
+    let x = document.getElementById('myInput')
+    let y = document.getElementById('hide1')
+    let z = document.getElementById('hide2')
+
+
+    if (x.type === 'password') {
+        x.type = 'text';
+        y.style.display = 'block';
+        z.style.display = 'none';
+    }
+
+    else {
+        x.type = 'password';
+        y.style.display = 'none';
+        z.style.display = 'block';
+    }
+}
+
+</script>
+</body>
+</html>
