@@ -87,6 +87,7 @@ header {
 header .content {
   background: rgba(0, 0, 0, 0.4);
   min-height: 100%;
+  min-width: 100%;
 }
 
 /* nav */
@@ -158,7 +159,7 @@ header section .sect_btn {
 /* Main */
 main {
   background: var(--gray-bg);
-  min-height: 75vh;
+  min-height: 50vh;
   padding: 62px 0;
   position: relative;
 }
@@ -212,47 +213,53 @@ main .our-image img {
 }
 
 /* Section */
-section#download {
-  position: relative;
-  background: var(--gray-bg);
-  height: 75vh;
+#download {
+  background: #ffd43c;
+  height: 30vh;
 }
 
-section#download .bg {
-  position: absolute;
-  width: 100%;
-  height: 45vh;
-  bottom: 150px;
-  background: url("../images/yellow_bg.png");
-}
-
-section#download .bg .container {
+#download .container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
 }
 
-section#download .bg .content h3 {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 28px;
-  line-height: 36px;
-  letter-spacing: -0.02em;
+#download .download_message h2 {
   color: var(--white);
+  margin-bottom: 10px;
 }
 
-section#download .bg .content img {
-  background: #000;
-  margin: 1rem 0;
-  padding: 8px 16px;
-  border-radius: 5px;
+#download .anim img {
+  width: auto;
+  height: 200px;
 }
 
-section#download > img {
-  position: absolute;
-  right: 200px;
-  top: 0;
-  bottom: 10px;
+/* To animate the Mobile icon */
+#download .anim {
+  -webkit-animation: action 1s infinite alternate;
+  animation: action 1s infinite alternate;
+  margin-left: 11rem;
+  -webkit-animation: action 1s infinite alternate;
+  animation: action 1s infinite alternate;
+  margin-top: 1rem;
+  margin-bottom: -2rem;
+}
+@-webkit-keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
 
 /* Footer */
@@ -316,4 +323,435 @@ footer .bottom li {
 
 footer .bottom li a {
   color: #000;
+}
+
+/* BURGER MENU FOR SMALLER DEVICE */
+.burger {
+  cursor: pointer;
+  display: none;
+  z-index: 1;
+}
+
+.burger .line:first-child {
+  width: 12px;
+}
+
+.burger .line {
+  display: block;
+  background: var(--dark-blue);
+  height: 2px;
+  width: 25px;
+  margin: 12px;
+  transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 1000px) {
+  .burger {
+    display: block;
+    z-index: 3000;
+  }
+
+  .nav-menu {
+    width: 100vw;
+    height: 100vh;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    left: 0px;
+    transform: translateY(-100%);
+    transition: transform 1s 0s ease-in-out;
+    z-index: 2000;
+    overflow: hidden;
+  }
+
+  .nav-menu li {
+    margin: 20px;
+    opacity: 0;
+  }
+
+  .nav-active {
+    background: rgba(0, 0, 0, 0.9);
+
+    transform: translateY(0%);
+  }
+
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  .toggle .line:first-child {
+    width: 24px;
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle .line:last-child {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+/* Small devices */
+@media (max-width: 1000px) {
+  /* Header */
+  header {
+    height: 50vh;
+  }
+
+  header section {
+    margin: 7rem 0;
+  }
+
+  /* nav */
+  /* nav ul {
+    display: none;
+  } */
+
+  /* Main */
+  main {
+    min-height: 100vh;
+    padding: 62px 0;
+    position: static;
+  }
+
+  main .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+  }
+
+  main .our-image {
+    background: url("../images/Vector.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px 100px;
+  }
+
+  main .our-image {
+    position: static;
+  }
+
+  main .our-image img {
+    position: static;
+    width: 100%;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--white);
+    padding: 52px 0;
+  }
+
+  footer .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer h2 {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 42px;
+    letter-spacing: -0.02em;
+  }
+
+  footer .top ul {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0;
+  }
+
+  footer .top li {
+    margin: 0 1rem;
+  }
+
+  footer .top input {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+
+  footer .top li:hover a {
+    padding-bottom: 8px;
+  }
+
+  footer .bottom {
+    margin-top: 32px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  footer .bottom ul {
+    justify-content: center;
+  }
+
+  footer .bottom li {
+    margin: 16px 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Header */
+  header {
+    background: var(--dark-blue) url("../images/about_us_header_bg.png") center center/cover;
+    height: 100vh;
+    display: flex;
+  }
+
+  /* nav */
+  /* nav ul {
+    display: none;
+  } */
+
+  /* Header Section */
+  header section {
+    text-align: center;
+    margin: 50% 0;
+  }
+
+  header section h1 {
+    font-size: 30px;
+  }
+
+  /* Main */
+  main {
+    text-align: center;
+    background: var(--gray-bg);
+    min-height: 100%;
+    position: relative;
+  }
+
+  main .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  main .our-story h2 {
+    margin: 8px 0;
+    font-size: 30px;
+  }
+
+  main .our-story h3 {
+    margin: 16px 0;
+    font-size: 15px;
+  }
+
+  main .our-story p {
+    font-size: 14px;
+  }
+
+  main .our-image {
+    background: url("../images/Vector.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px 100px;
+  }
+
+  main .our-image {
+    position: static;
+  }
+
+  main .our-image img {
+    position: static;
+    width: 100%;
+  }
+
+  /* Section */
+  #download {
+    background: #ffd43c;
+    height: 70vh;
+  }
+
+  #download .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100%;
+  }
+
+  #download .download_message h2 {
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+
+  #download .download_message h2 {
+    color: var(--white);
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--white);
+    padding: 52px 0;
+  }
+
+  footer .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer h2 {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 42px;
+    letter-spacing: -0.02em;
+  }
+
+  footer .top ul {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0;
+  }
+
+  footer .top li {
+    margin: 0 1rem;
+  }
+
+  footer .top input {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+
+  footer .top li:hover a {
+    padding-bottom: 8px;
+  }
+
+  footer .bottom {
+    margin-top: 32px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  footer .bottom ul {
+    justify-content: center;
+  }
+
+  footer .bottom li {
+    margin: 16px 8px;
+  }
+}
+
+/* Landscape */
+
+@media (max-height: 800px) and (min-width: 1000px) {
+  #download {
+    height: 40vh;
+  }
+}
+
+@media (max-height: 600px) and (min-width: 500px) {
+  /* Header */
+  header {
+    height: 100vh;
+  }
+
+  header section {
+    margin: 2rem 0;
+  }
+
+  header section h1 {
+    font-size: 26px;
+  }
+  header section p {
+    font-size: 14px;
+  }
+
+  header section .sect_btn {
+    margin: 16px 0;
+    padding: 12px 50px;
+  }
+
+  main .our-story h2 {
+    font-size: 29px;
+    margin: 10px 0;
+  }
+
+  main .our-story h3 {
+    font-size: 20px;
+    margin: 8px 0;
+  }
+
+  main .our-story p {
+    font-size: 14px;
+    line-height: 27px;
+  }
+
+  #download {
+    height: 80vh;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--white);
+    padding: 52px 0;
+  }
+
+  footer .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer h2 {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 42px;
+    letter-spacing: -0.02em;
+  }
+
+  footer .top ul {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0;
+  }
+
+  footer .top li {
+    margin: 0 1rem;
+  }
+
+  footer .top input {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+
+  footer .top li:hover a {
+    padding-bottom: 8px;
+  }
+
+  footer .bottom {
+    margin-top: 32px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  footer .bottom ul {
+    justify-content: center;
+  }
+
+  footer .bottom li {
+    margin: 16px 8px;
+  }
+}
+
+@media (max-height: 400px) and (min-width: 500px) {
+  #download {
+    height: 120vh;
+  }
 }
