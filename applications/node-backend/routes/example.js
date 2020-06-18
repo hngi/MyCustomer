@@ -1,8 +1,10 @@
 const express = require('express');
+
 const router = express.Router();
-const ExampleController = require('../controllers/mailer')
+
+const ExampleController = require('../controllers/example')
 
 //Maintain the endpoint naming convention
-router.post('/example', ExampleController.action);
+router.get('/', ExampleController.test);
 
 module.exports = router;
