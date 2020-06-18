@@ -1,36 +1,32 @@
-# Team Sentry
+<div align="center">
+  
+![hng](https://res.cloudinary.com/iambeejayayo/image/upload/v1554240066/brand-logo.png)
+
+<br>
+
+</div>
+
+#### AUTHENTIATION ROUTES
+- [x] api/register/user - to register a new user 
+- [x] api/login - to login an existing user
+- [x] api/user - to get authenicated users details
+- [x] api/logout - destroy's token
 
 
-###TEAM Sentry - INSTALLATION
+[postman documentation](https://documenter.getpostman.com/view/6901755/Szzkdxty
+)
 
-Step 1: Click on Fork at the top right corner
+# Installation Guide
 
-Step 2: Clone your forked repository
+- You need a server, download [Wamp](http://www.wampserver.com/en/) or [Xampp](https://www.apachefriends.org/index.html)
 
-Step 3: cd into the cloned folded | <code>cd https://github.com/ekpono/santry-customerapp</code>
-
-Step 4: git remote add upstream https://github.com/ekpono/santry-customerapp.git
-
-Step 5: git pull upstream master
-
-Step 6: Check out to the task branch | <code>git checkout -b <NAME_OF_THE_TASK></code>
-
-
-#### Creating a pull request
-
-Step 1: Run: git add .
-
-Step 2: Run: git commit -m "<COMMIT MESSAGE>"
-
-Step 3: git push origin <BRANCH_NAME>
-
-Go to the repository https://github.com/ekpono/santry-customerapp
-
-As soon as you get there, you are going to see a green ‘compare and create a pull request’
-
-Click on it, and type your message, click on create pull request.
-
-If you have any more questions, please check out this resource -> https://www.youtube.com/watch?v=HbSjyU2vf6Y
-
-
+- fork and clone this repository to get a local copy
+- change into the new projects directory
+- add upstream and checkout to a new branch
+- run `cp .env.example .env` to get .env file
+- add your database details
+- run `composer install`
+- run `php artisan migrate` to migrate database schema
+- run `php artisan passport:install`
+- finally start your local serve using `php artisan serve` 
 
