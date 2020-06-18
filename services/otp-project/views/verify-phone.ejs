@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Phone</title>
+</head>
+<body>
+    <form action="/verify" method="POST">
+        <h2>Enter verification code</h2>
+        <input type="text" name="id" value="<%= response.id%>" style="display: none;">
+        <input type="text" name="token">
+        <input type="submit">
+    </form>
+</body>
+</html>
