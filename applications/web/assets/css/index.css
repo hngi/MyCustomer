@@ -579,10 +579,9 @@ nav h6 {
     .download_message h2{
         margin-top: 2rem;
     }
-    .download_image{
-        margin-top: 0.5rem;
+    #download > .anim{
+        margin-left: 5rem;
     }
-    
     .message_box{
         flex-direction: column;
     }
