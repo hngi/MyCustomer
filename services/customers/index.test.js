@@ -1,43 +1,37 @@
 const mongoose=require('mongoose');
-const Customer=require("./models/customers");
+const axios=require('axios')
+const Customer=require("./src/models/customers");
 const databaseName = 'customers'
+
 describe('insert', () => {
-  let connection;
-  let db;
 
   beforeAll(async () => {
-    const url = `mongodb://127.0.0.1/${databaseName}`
-    connection = await mongoose.connect(url, { useNewUrlParser: true })
-    });
-    db = await connection.db(global.__MONGO_DB_NAME__);
+    const url = `mongodb://127.0.0.1:27017/${databaseName}`
+    await mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
   });
 
   afterAll(async () => {
-    await connection.close();
-    await db.close();
+    await mongoose.connection.close();
   });
 
   afterEach(async () => {
     await Customer.deleteMany()
   });
 
-  it('Should save user to database', async done => {
+  test('Should save user to database', async done => {
     // Sends request...
-    const res = await request.post('/customer')
-    .send({
-        _id:1,
-        name: 'Zell',
-        phone: '8139476518'
-      })
+    let res = await axios.post('http://localhost:3001/customer', {
+      _id: 1,
+      name: 'Zell',
+      phone: '8139476518'
+    });
+    
+    // Searches the user in the database
+    const customer = await Customer.findOne({ name: 'Zell' })
 
-  // Searches the user in the database
-      const costomer = await Customer.findOne({ _id: 1 })
-
-  // Ensures response contains name and email 
-      expect(user.name).toBeTruthy()
-      expect(user.phone).toBeTruthy()
+    // Ensures response
+    expect(JSON.stringify(customer)).toEqual(JSON.stringify(res.data))
 
     done()
   });
-
-  
+});
