@@ -159,7 +159,7 @@ header section .sect_btn {
 /* Main */
 main {
   background: var(--gray-bg);
-  min-height: 75vh;
+  min-height: 50vh;
   padding: 62px 0;
   position: relative;
 }
@@ -213,47 +213,53 @@ main .our-image img {
 }
 
 /* Section */
-section#download {
-  position: relative;
-  background: var(--gray-bg);
-  height: 75vh;
+#download {
+  background: #ffd43c;
+  height: 30vh;
 }
 
-section#download .bg {
-  position: absolute;
-  width: 100%;
-  height: 45vh;
-  bottom: 150px;
-  background: url("../images/yellow_bg.png");
-}
-
-section#download .bg .container {
+#download .container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
 }
 
-section#download .bg .content h3 {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 28px;
-  line-height: 36px;
-  letter-spacing: -0.02em;
+#download .download_message h2 {
   color: var(--white);
+  margin-bottom: 10px;
 }
 
-section#download .bg .content img {
-  background: #000;
-  margin: 1rem 0;
-  padding: 8px 16px;
-  border-radius: 5px;
+#download .anim img {
+  width: auto;
+  height: 200px;
 }
 
-section#download > img {
-  position: absolute;
-  right: 200px;
-  top: 0;
-  bottom: 10px;
+/* To animate the Mobile icon */
+#download .anim {
+  -webkit-animation: action 1s infinite alternate;
+  animation: action 1s infinite alternate;
+  margin-left: 11rem;
+  -webkit-animation: action 1s infinite alternate;
+  animation: action 1s infinite alternate;
+  margin-top: 1rem;
+  margin-bottom: -2rem;
+}
+@-webkit-keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
 
 /* Footer */
@@ -319,86 +325,81 @@ footer .bottom li a {
   color: #000;
 }
 
-/* Media querries  */
+/* BURGER MENU FOR SMALLER DEVICE */
+.burger {
+  cursor: pointer;
+  display: none;
+  z-index: 1;
+}
 
-@media (max-width: 1200px) {
-  /* Header */
-  header {
-    height: 50vh;
+.burger .line:first-child {
+  width: 12px;
+}
+
+.burger .line {
+  display: block;
+  background: var(--dark-blue);
+  height: 2px;
+  width: 25px;
+  margin: 12px;
+  transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 1000px) {
+  .burger {
+    display: block;
+    z-index: 3000;
   }
 
-  header section {
-    margin: 7rem 0;
-  }
-
-  /* nav */
-
-  nav ul {
-    display: flex;
-  }
-
-  /* Main */
-  main {
-    min-height: 100vh;
-    padding: 62px 0;
-    position: static;
-  }
-
-  main .grid-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 16px;
-  }
-
-  main .our-image {
-    background: url("../images/Vector.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100px 100px;
-  }
-
-  main .our-image {
-    position: static;
-  }
-
-  main .our-image img {
-    position: static;
-    width: 100%;
-  }
-
-  /* Section */
-  section#download {
-    position: relative;
-    background: var(--gray-bg);
-    height: 56vh;
-  }
-
-  section#download .bg {
+  .nav-menu {
+    width: 100vw;
+    height: 100vh;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    width: 100%;
-    height: 25vh;
-    bottom: 150px;
-    background: url("../images/yellow_bg.png");
+    top: 0;
+    right: 0px;
+    left: 0px;
+    transform: translateY(-100%);
+    transition: transform 1s 0s ease-in-out;
+    z-index: 2000;
+    overflow: hidden;
   }
 
-  section#download .bg .content h3 {
-    width: 65%;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 28px;
-    line-height: 36px;
-    letter-spacing: -0.02em;
-    color: var(--white);
+  .nav-menu li {
+    margin: 20px;
+    opacity: 0;
   }
 
-  section#download > img {
-    position: absolute;
-    right: 10px;
-    bottom: 0;
-    top: 60px;
+  .nav-active {
+    background: rgba(0, 0, 0, 0.9);
+
+    transform: translateY(0%);
+  }
+
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  .toggle .line:first-child {
+    width: 24px;
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle .line:last-child {
+    transform: rotate(45deg) translate(-5px, -6px);
   }
 }
 
+/* Small devices */
 @media (max-width: 1000px) {
   /* Header */
   header {
@@ -410,10 +411,9 @@ footer .bottom li a {
   }
 
   /* nav */
-
-  nav ul {
+  /* nav ul {
     display: none;
-  }
+  } */
 
   /* Main */
   main {
@@ -444,36 +444,59 @@ footer .bottom li a {
     width: 100%;
   }
 
-  /* Section */
-  section#download {
-    position: relative;
-    background: var(--gray-bg);
-    height: 70vh;
+  /* Footer */
+  footer {
+    background: var(--white);
+    padding: 52px 0;
   }
 
-  section#download .bg {
-    position: absolute;
-    width: 100%;
-    height: 35vh;
-    bottom: 150px;
-    background: url("../images/yellow_bg.png");
+  footer .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
-  section#download .bg .content h3 {
-    width: 65%;
-    font-style: normal;
+  footer h2 {
     font-weight: bold;
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 25px;
+    line-height: 42px;
     letter-spacing: -0.02em;
-    color: var(--white);
   }
 
-  section#download > img {
-    position: absolute;
-    right: 10px;
-    bottom: 0;
-    top: 60px;
+  footer .top ul {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0;
+  }
+
+  footer .top li {
+    margin: 0 1rem;
+  }
+
+  footer .top input {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+
+  footer .top li:hover a {
+    padding-bottom: 8px;
+  }
+
+  footer .bottom {
+    margin-top: 32px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  footer .bottom ul {
+    justify-content: center;
+  }
+
+  footer .bottom li {
+    margin: 16px 8px;
   }
 }
 
@@ -486,9 +509,9 @@ footer .bottom li a {
   }
 
   /* nav */
-  nav ul {
+  /* nav ul {
     display: none;
-  }
+  } */
 
   /* Header Section */
   header section {
@@ -497,7 +520,7 @@ footer .bottom li a {
   }
 
   header section h1 {
-    font-size: 40px;
+    font-size: 30px;
   }
 
   /* Main */
@@ -515,12 +538,12 @@ footer .bottom li a {
 
   main .our-story h2 {
     margin: 8px 0;
-    font-size: 40px;
+    font-size: 30px;
   }
 
   main .our-story h3 {
     margin: 16px 0;
-    font-size: 20px;
+    font-size: 15px;
   }
 
   main .our-story p {
@@ -544,36 +567,26 @@ footer .bottom li a {
   }
 
   /* Section */
-  section#download {
-    position: relative;
-    background: var(--gray-bg);
-    height: 75vh;
+  #download {
+    background: #ffd43c;
+    height: 70vh;
   }
 
-  section#download .bg {
-    position: absolute;
-    width: 100%;
-    height: 45vh;
-    bottom: 150px;
-    background: url("../images/yellow_bg.png");
+  #download .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100%;
   }
 
-  section#download .bg .content h3 {
-    width: 65%;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 23px;
-    line-height: 36px;
-    letter-spacing: -0.02em;
+  #download .download_message h2 {
     color: var(--white);
+    margin-bottom: 10px;
   }
 
-  section#download > img {
-    display: none;
-    position: absolute;
-    right: 200px;
-    top: 0;
-    bottom: 10px;
+  #download .download_message h2 {
+    color: var(--white);
+    margin-bottom: 10px;
+    font-size: 15px;
   }
 
   /* Footer */
@@ -592,7 +605,7 @@ footer .bottom li a {
 
   footer h2 {
     font-weight: bold;
-    font-size: 32px;
+    font-size: 25px;
     line-height: 42px;
     letter-spacing: -0.02em;
   }
@@ -610,9 +623,6 @@ footer .bottom li a {
   footer .top input {
     margin: 10px 0;
     font-size: 14px;
-  }
-
-  footer .top li a {
   }
 
   footer .top li:hover a {
@@ -635,33 +645,11 @@ footer .bottom li a {
   }
 }
 
-@media (max-height: 1200px) and (min-width: 1200px) {
-  section#download {
-    position: relative;
-    background: var(--gray-bg);
-    height: 65vh;
-  }
-}
+/* Landscape */
 
 @media (max-height: 800px) and (min-width: 1000px) {
-  header {
-    background: var(--dark-blue) url("../images/about_us_header_bg.png");
-    background-size: cover;
-    height: 80vh;
-  }
-
-  section#download {
-    position: relative;
-    background: var(--gray-bg);
-    height: 90vh;
-  }
-
-  section#download .bg {
-    position: absolute;
-    width: 100%;
-    height: 50vh;
-    bottom: 100px;
-    background: url("../images/yellow_bg.png");
+  #download {
+    height: 40vh;
   }
 }
 
@@ -702,29 +690,8 @@ footer .bottom li a {
     line-height: 27px;
   }
 
-  section#download {
-    height: 195vh;
-  }
-
-  section#download .bg {
-    position: absolute;
-    width: 100%;
-    height: 65vh;
-    bottom: 250px;
-    background: url("../images/yellow_bg.png");
-  }
-
-  section#download .bg .content h3 {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 36px;
-    letter-spacing: -0.02em;
-    color: var(--white);
-  }
-
-  section#download .bg .content img {
-    width: 200px;
+  #download {
+    height: 80vh;
   }
 
   /* Footer */
@@ -780,5 +747,11 @@ footer .bottom li a {
 
   footer .bottom li {
     margin: 16px 8px;
+  }
+}
+
+@media (max-height: 400px) and (min-width: 500px) {
+  #download {
+    height: 120vh;
   }
 }
