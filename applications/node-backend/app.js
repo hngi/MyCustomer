@@ -1,15 +1,12 @@
 
 const path = require('path');
 
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 
 const ejs = require("ejs");
-
 var cors = require('cors');
-const mailer = require('./routes/example');
 const phone_verification = require('./routes/verify-phone-number')
 app.use(cors());
 
@@ -21,7 +18,6 @@ app.use('/images', express.static(path.join(__dirname, 'images')));
 
 app.set("view engine", "ejs");
 
-app.use(mailer);
 app.use(phone_verification)
 
 require('dotenv').config()
