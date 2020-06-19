@@ -48,7 +48,7 @@ const userSchema = new mongoose.Schema({
             required: true 
         }
     },
-    customers = [
+    customers: [
         customerSchema
     ],
     transactions: [
